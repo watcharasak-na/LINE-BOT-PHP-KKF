@@ -24,6 +24,8 @@ if (!is_null($events['events'])) {
         $replyText = 'สวัสดีเช่นกัน';
       } else if ($text == 'คุณชื่ออะไร') {
         $replyText = 'ศานติโลกา';
+      } else if ($text == 'ทำอะไรได้บ้าง') {
+        $replyText = 'ฉันทำได้หลายอย่าง เช่น บอกคุณว่าเรามีกิจกรรมอะไรบ้างในอนาคต';
       } else {
         $replyText = 'ไม่เข้าใจ';
       }
