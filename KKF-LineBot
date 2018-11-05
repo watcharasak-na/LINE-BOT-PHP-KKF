@@ -8,8 +8,9 @@
     $arrayHeader[] = "Content-Type: application/json";
     $arrayHeader[] = "Authorization: Bearer {$accessToken}";
     
-    //รับข้อความจากผู้ใช้
-    $message = $arrayJson['events'][0]['message']['text'];
+//รับข้อความจากผู้ใช้
+$message = $arrayJson['events'][0]['message']['text'];
+
 #ตัวอย่าง Message Type "Text"
     if($message == "OK"){
         $arrayPostData['replyToken'] = $arrayJson['events'][0]['replyToken'];
@@ -69,4 +70,3 @@ function replyMsg($arrayHeader,$arrayPostData){
     }
     echo "OK";
    exit;
-?>
