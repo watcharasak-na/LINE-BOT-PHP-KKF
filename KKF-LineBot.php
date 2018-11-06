@@ -53,43 +53,13 @@ $result = curl_exec($ch);
 curl_close ($ch);
 
 if($arrJson['events'][0]['message']['text'] == "แผนวันนี้") {
-
-  $postData = array(
-   'user' => 'admin',
-   'pw' => 'admin',
-   'submit' => 'Login'
-   );
-
-  // Setup cURL
-  $ch = curl_init('https://script.google.com/d/1JOAv3B4BFK_iD96wwIjj2E8nKI4OI7pRft3u_Gpb5k4ZPK6aALFEUPg1/edit?usp=drive_web');
-  curl_setopt_array($ch, array(
-  CURLOPT_POST => TRUE,
-  CURLOPT_RETURNTRANSFER => TRUE,
-  CURLOPT_HTTPHEADER => array('Content-Type: application/x-www-form-urlencoded'
- ),
-  CURLOPT_POSTFIELDS => json_encode($postData)
-));
-
- // Send the request
-   $response = curl_exec($ch);
-
- var_dump($response);
-
- // Check for errors
-  if($response === FALSE){
-  die(curl_error($ch));
-  }
-
-   // Decode the response
-    $responseData = json_decode($response, TRUE);
-
-// Print the date from the response
- echo $responseData['published'];
-
-}else{
+ 
+ $ch = curl_init();
+curl_setopt($ch, CURLOPT_URL, "https://script.google.com/d/1JOAv3B4BFK_iD96wwIjj2E8nKI4OI7pRft3u_Gpb5k4ZPK6aALFEUPg1/edit?usp=drive_web");
+curl_setopt($ch, CURLOPT_HTTPHEADER, array(‘Host: engineerball.com));
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+$c = curl_exec($ch);
 }
-
-
 
 
 
