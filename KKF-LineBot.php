@@ -51,7 +51,7 @@ curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 $result = curl_exec($ch);
 curl_close ($ch);
 
-if($arrJson['events'][0]['message']['text'] == "สวัสดี") {
+if($arrJson['events'][0]['message']['text'] == "แผนวันนี้") {
 use curl php library: http://php.net/manual/en/book.curl.php
 
 direct example: CURL_EXEC:
