@@ -1,6 +1,6 @@
 <?php
 define("LINE_API","https://notify-api.line.me/api/notify");
-define("LINE_TOKEN","m2MCBdM4T7RguF7QdDCcU6CxBjCahkHzzWZKNiRVUK3");
+define("LINE_TOKEN","Wqw7kXFV9d7Gb3fzDzWqZvIBBqEs7EYU6oK7whfpZ5a");
 function notify_message($message){
     $queryData = array('message' => $message);
     $queryData = http_build_query($queryData,'','&');
