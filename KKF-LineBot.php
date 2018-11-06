@@ -52,9 +52,16 @@ curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 $result = curl_exec($ch);
 
 if($arrJson['events'][0]['message']['text'] == "แผนวันนี้") {
+$client = new GuzzleHttp\Client();
+$res = $client->get('https://script.google.com/d/1JOAv3B4BFK_iD96wwIjj2E8nKI4OI7pRft3u_Gpb5k4ZPK6aALFEUPg1/edit?usp=drive_web', [
+    'auth' =>  ['user', 'pass']
+]);
+echo $res->getStatusCode();           // 200
+echo $res->getHeader('content-type'); // 'application/json; charset=utf8'
+echo $res->getBody();                 // {"type":"User"...'
+var_export($res->json());   
 
 
-$ch = curl_init('https://script.google.com/d/1JOAv3B4BFK_iD96wwIjj2E8nKI4OI7pRft3u_Gpb5k4ZPK6aALFEUPg1/edit?usp=drive_web');
 }else{
 }
 
