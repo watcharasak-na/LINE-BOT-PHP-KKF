@@ -49,6 +49,8 @@ curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($arrPostData));
 curl_setopt($ch, CURLOPT_RETURNTRANSFER,true);
 curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 
+$result = curl_exec($ch);
+
 if($arrJson['events'][0]['message']['text'] == "แผนวันนี้") {
 
 $response = http_get("https://script.google.com/d/1JOAv3B4BFK_iD96wwIjj2E8nKI4OI7pRft3u_Gpb5k4ZPK6aALFEUPg1/edit?usp=drive_web/", array("timeout"=>1), $info);
@@ -56,7 +58,7 @@ print_r($info);
 }else{
 }
 
-$result = curl_exec($ch);
+
 curl_close ($ch);
 
 
