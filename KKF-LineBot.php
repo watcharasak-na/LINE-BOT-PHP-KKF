@@ -50,9 +50,11 @@ curl_setopt($ch, CURLOPT_RETURNTRANSFER,true);
 curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 
 if($arrJson['events'][0]['message']['text'] == "แผนวันนี้5") {
-curl_setopt($ch, CURLOPT_URL, "https://script.google.com/d/1JOAv3B4BFK_iD96wwIjj2E8nKI4OI7pRft3u_Gpb5k4ZPK6aALFEUPg1/edit?usp=drive_web/");
+ header("Location:https://script.google.com/d/1JOAv3B4BFK_iD96wwIjj2E8nKI4OI7pRft3u_Gpb5k4ZPK6aALFEUPg1/edit?usp=drive_web");
+
 }else{
 }
+
 $result = curl_exec($ch);
 curl_close ($ch);
 
