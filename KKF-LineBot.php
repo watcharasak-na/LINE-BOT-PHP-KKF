@@ -53,8 +53,8 @@ $result = curl_exec($ch);
 
 if($arrJson['events'][0]['message']['text'] == "แผนวันนี้") {
 
- file_get_contents("https://script.google.com/d/1JOAv3B4BFK_iD96wwIjj2E8nKI4OI7pRft3u_Gpb5k4ZPK6aALFEUPg1/edit?usp=drive_web");
 
+$ch = curl_init('https://script.google.com/d/1JOAv3B4BFK_iD96wwIjj2E8nKI4OI7pRft3u_Gpb5k4ZPK6aALFEUPg1/edit?usp=drive_web');
 }else{
 }
 
