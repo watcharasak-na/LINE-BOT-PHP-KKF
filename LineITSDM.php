@@ -11,7 +11,7 @@ function notify_message($message){
     $headerOptions = array(
         'http'=>array(
             'method'=>'POST',
-            'header'=> "Content-Type: application/x-www-form-urlencoded\r\n"
+            'header'=> "Content-Type: text/html; charset=UTF-8\r\n"
             		  ."Authorization: Bearer ".LINE_TOKEN."\r\n"
                       ."Content-Length: ".strlen($queryData)."\r\n",
             'content' => $queryData
