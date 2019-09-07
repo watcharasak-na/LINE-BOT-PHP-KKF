@@ -4,7 +4,6 @@ define("LINE_TOKEN","4yeYxn5rva9Pn9sDQFHPY058LWhSBXRjtgbgWXYvsbm");
 
 function notify_message($message){
 	
-		header("Content-type: text/html; charset=utf-8");
 
 
     $queryData = array('message' => $message);
