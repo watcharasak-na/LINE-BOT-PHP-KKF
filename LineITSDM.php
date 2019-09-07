@@ -4,8 +4,8 @@ define("LINE_TOKEN","4yeYxn5rva9Pn9sDQFHPY058LWhSBXRjtgbgWXYvsbm");
 
 function notify_message($message){
 	
-		
-iconv_substr($message, 0,100, "UTF-8");
+		header("Content-type: text/html; charset=utf-8");
+
 
     $queryData = array('message' => $message);
     $queryData = http_build_query($queryData,'','&');
